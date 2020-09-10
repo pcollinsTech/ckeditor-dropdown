@@ -21,7 +21,6 @@ import Underline from "@ckeditor/ckeditor5-basic-styles/src/underline";
 import BlockQuote from "@ckeditor/ckeditor5-block-quote/src/blockquote";
 import CKFinder from "@ckeditor/ckeditor5-ckfinder/src/ckfinder";
 import EasyImage from "@ckeditor/ckeditor5-easy-image/src/easyimage";
-import Heading from "@ckeditor/ckeditor5-heading/src/heading";
 import Image from "@ckeditor/ckeditor5-image/src/image";
 import ImageCaption from "@ckeditor/ckeditor5-image/src/imagecaption";
 import ImageStyle from "@ckeditor/ckeditor5-image/src/imagestyle";
@@ -37,90 +36,99 @@ import PasteFromOffice from "@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import Table from "@ckeditor/ckeditor5-table/src/table";
 import TableToolbar from "@ckeditor/ckeditor5-table/src/tabletoolbar";
 import TextTransformation from "@ckeditor/ckeditor5-typing/src/texttransformation";
-import InsertDropdownItem from "./InsertDropDown";
+import InsertCustomerDropDown from "./InsertCustomerDropDown";
+import InsertCaseDropDown from "./InsertCaseDropDown";
+import InsertPartnerDropDown from "./InsertPartnerDropDown";
+import InsertProviderDropDown from "./InsertProviderDropDown";
 export default class DecoupledEditor extends DecoupledEditorBase {}
 
 // Plugins to include in the build.
 DecoupledEditor.builtinPlugins = [
-	Essentials,
-	Alignment,
-	FontSize,
-	FontFamily,
-	FontColor,
-	FontBackgroundColor,
-	UploadAdapter,
-	Autoformat,
-	Bold,
-	Italic,
-	Strikethrough,
-	Underline,
-	BlockQuote,
-	CKFinder,
-	EasyImage,
-	Image,
-	ImageCaption,
-	ImageStyle,
-	ImageToolbar,
-	ImageUpload,
-	Indent,
-	IndentBlock,
-	Link,
-	List,
-	MediaEmbed,
-	Paragraph,
-	PasteFromOffice,
-	Table,
-	TableToolbar,
-	TextTransformation,
-	InsertDropdownItem,
+  Essentials,
+  Alignment,
+  FontSize,
+  FontFamily,
+  FontColor,
+  FontBackgroundColor,
+  UploadAdapter,
+  Autoformat,
+  Bold,
+  Italic,
+  Strikethrough,
+  Underline,
+  BlockQuote,
+  CKFinder,
+  EasyImage,
+  Image,
+  ImageCaption,
+  ImageStyle,
+  ImageToolbar,
+  ImageUpload,
+  Indent,
+  IndentBlock,
+  Link,
+  List,
+  MediaEmbed,
+  Paragraph,
+  PasteFromOffice,
+  Table,
+  TableToolbar,
+  TextTransformation,
+  InsertCaseDropDown,
+  InsertCustomerDropDown,
+  InsertPartnerDropDown,
+  InsertProviderDropDown,
 ];
 
 // Editor configuration.
 DecoupledEditor.defaultConfig = {
-	toolbar: {
-		items: [
-			"fontfamily",
-			"fontsize",
-			"fontColor",
-			"fontBackgroundColor",
-			"|",
-			"bold",
-			"italic",
-			"underline",
-			"strikethrough",
-			"|",
-			"alignment",
-			"|",
-			"numberedList",
-			"bulletedList",
-			"|",
-			"indent",
-			"outdent",
-			"|",
-			"link",
-			"blockquote",
-			"imageUpload",
-			"insertTable",
-			"mediaEmbed",
-			"|",
-			"undo",
-			"redo",
-			"insertDropdownItem",
-		],
-	},
-	image: {
-		styles: ["full", "alignLeft", "alignRight"],
-		toolbar: [
-			"imageStyle:alignLeft",
-			"imageStyle:full",
-			"imageStyle:alignRight",
-			"|",
-			"imageTextAlternative",
-		],
-	},
-	table: {
-		contentToolbar: ["tableColumn", "tableRow", "mergeTableCells"],
-	},
-	// This value must be kept in sync with the language defined in webpack.config.js.
-	language: "en",
+  toolbar: {
+    items: [
+      "fontfamily",
+      "fontsize",
+      "fontColor",
+      "fontBackgroundColor",
+      "|",
+      "bold",
+      "italic",
+      "underline",
+      "strikethrough",
+      "|",
+      "alignment",
+      "|",
+      "numberedList",
+      "bulletedList",
+      "|",
+      "indent",
+      "outdent",
+      "|",
+      "link",
+      "blockquote",
+      "imageUpload",
+      "insertTable",
+      "mediaEmbed",
+      "|",
+      "undo",
+      "redo",
+      "insertCustomerDropdownItem",
+      "insertPartnerDropdownItem",
+      "insertCaseDropdownItem",
+      "insertProviderDropdownItem",
+    ],
+  },
+  image: {
+    styles: ["full", "alignLeft", "alignRight"],
+    toolbar: [
+      "imageStyle:alignLeft",
+      "imageStyle:full",
+      "imageStyle:alignRight",
+      "|",
+      "imageTextAlternative",
+    ],
+  },
+  table: {
+    contentToolbar: ["tableColumn", "tableRow", "mergeTableCells"],
+  },
+  // This value must be kept in sync with the language defined in webpack.config.js.
+  language: "en",
 };
