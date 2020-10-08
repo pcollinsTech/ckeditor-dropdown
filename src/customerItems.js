@@ -1,5 +1,9 @@
 const customerItems = [
   {
+    label: "New Paragraph",
+    content: "<<<NEW_LINE>>>",
+  },
+  {
     label: "Customer Title",
     content: "<<<CUSTOMER_TITLE>>>",
   },
