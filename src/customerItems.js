@@ -124,7 +124,7 @@ const customerItems = [
     content: "<<<CUSTOMER_SANCTIONS_CHECK>>>",
   },
   {
-    label: "Customer Rick Profile",
+    label: "Customer Risk Profile",
     content: "<<<CUSTOMER_RISK_PROFILE>>>",
   },
 ];
